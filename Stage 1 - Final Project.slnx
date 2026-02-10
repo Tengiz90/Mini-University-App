@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EduVerse/EduVerse.csproj">
+    <Deploy />
+  </Project>
+</Solution>

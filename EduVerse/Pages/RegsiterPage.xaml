@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EduVerse.Pages.RegisterPage"
+             Title="Register">
+    <ScrollView  x:Name="mainScroll">
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <VerticalStackLayout>
+                <Entry x:Name="idEntry" Placeholder="ID" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="idErrorMessage" IsVisible="False" TextColor="Red"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Entry x:Name="firstNameEntry" Placeholder="First Name" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="firstNameErrorMessage" IsVisible="False" TextColor="Red"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Entry x:Name="lastNameEntry" Placeholder="Last Name"  ClearButtonVisibility="WhileEditing"/>
+                <Label x:Name="lastNameErrorMessage" IsVisible="False" TextColor="Red"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Date of birth:"  />
+                <DatePicker x:Name="dobPicker" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Entry x:Name="emailEntry" Placeholder="Email"  ClearButtonVisibility="WhileEditing"/>
+                <Label x:Name="emailErrorMessage" IsVisible="False" TextColor="Red"/>
+            </VerticalStackLayout>
+            <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"  ClearButtonVisibility="WhileEditing"/>
+            <VerticalStackLayout>
+                <Entry x:Name="repeatPasswordEntry" Placeholder="Repeat Password" IsPassword="True"  ClearButtonVisibility="WhileEditing"/>
+                <Label x:Name="repeatPasswordErrorMessage" IsVisible="False" TextColor="Red"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Role:" />
+                <HorizontalStackLayout Spacing="15"  >
+                    <RadioButton x:Name="studentRadio" Content="Student" CheckedChanged="OnRoleChanged"/>
+                    <RadioButton x:Name="lecturerRadio" Content="Teacher" CheckedChanged="OnRoleChanged"  Margin="0"/>
+                </HorizontalStackLayout>
+                <Label x:Name="roleSelectErrorMessage" IsVisible="False" TextColor="Red"/>
+
+                <Entry x:Name="majorEntry" Placeholder="Major" IsVisible="False" />
+                <Label x:Name="majorErrorMessage" IsVisible="False" TextColor="Red"/>
+
+            </VerticalStackLayout>
+            <ActivityIndicator 
+               x:Name="processingIndicator"
+               IsRunning="True"
+               IsVisible="False"
+               Color="Purple"
+               WidthRequest="50"
+               HeightRequest="50" />
+            <Button Text="Next" Clicked="OnNextClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

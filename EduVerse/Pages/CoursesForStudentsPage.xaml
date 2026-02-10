@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EduVerse.Pages.CoursesForStudentsPage"
+    Title="Available Courses">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label x:Name="registrationInfoLabel"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               FontSize="16"
+               HorizontalOptions="Center"/>
+
+            <HorizontalStackLayout x:Name="enrolledFilterCheckBoxWrapper" Spacing="10" VerticalOptions="Center">
+                <CheckBox x:Name="enrolledFilterCheckBox"
+                          CheckedChanged="OnEnrolledFilterChanged"/>
+                <Label Text="Show only courses you are enrolled in"
+                       VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <ActivityIndicator 
+                x:Name="processingIndicator"
+                IsRunning="True"
+                IsVisible="False"
+                Color="Purple"
+                WidthRequest="50"
+                HeightRequest="50" />
+            <SearchBar 
+                x:Name="Search" 
+                Placeholder="Course Name"
+                TextChanged="OnSearchTextChanged"
+                IsVisible="False"/>
+            <CollectionView x:Name="coursesCollectionView"
+                        ItemsSource="{Binding Courses}" >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="5" />
+                </CollectionView.ItemsLayout>
+
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="Gray"
+                                StrokeShape="RoundRectangle 10"
+                                Padding="10">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding Name}"
+                                   FontSize="18"
+                                   FontAttributes="Bold" />
+
+
+                                <HorizontalStackLayout Spacing="10">
+                                    <Button Text="{Binding ButtonText}"
+                                        Clicked="OnEnrollToggleClicked"
+                                        BackgroundColor="#007AFF"
+                                        TextColor="White"
+                                        CornerRadius="10"
+                                        CommandParameter="{Binding .}"
+                                        />
+
+                                    <Button Text="See Description"
+                                        Clicked="OnSeeDescriptionClicked"
+                                        BackgroundColor="Brown"
+                                        TextColor="White"
+                                        CommandParameter="{Binding .}"
+                                        />
+
+                                    <Button Text="See Marks"
+                                        Clicked="OnSeeMarksClicked"
+                                        BackgroundColor="#34C759"
+                                        TextColor="White"
+                                        CornerRadius="10"
+                                        CommandParameter="{Binding .}"
+                                        IsVisible="{Binding IsEnrolled}
+                                        "/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EduVerse.Pages.LoginPage"
+             Title="Login">
+    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+
+        <Entry  x:Name="emailEntry" Text="" ClearButtonVisibility="WhileEditing" Placeholder="Email"/>
+        <Entry x:Name="passwordEntry"
+               Placeholder="Enter your password"
+               IsPassword="True" 
+               ClearButtonVisibility="WhileEditing"/>
+
+
+        <VerticalStackLayout>
+            <Label Text="Role:" />
+            <HorizontalStackLayout Spacing="15"  >
+                <RadioButton x:Name="studentRadio" Content="Student" CheckedChanged="OnRoleChanged"/>
+                <RadioButton x:Name="lecturerRadio" Content="Teacher" CheckedChanged="OnRoleChanged"  Margin="0"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Button Text="Login"
+                Clicked="OnLoginClicked"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                CornerRadius="10" />
+
+        <Label x:Name="errorLabel"
+               TextColor="Red"
+               IsVisible="False"
+               HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

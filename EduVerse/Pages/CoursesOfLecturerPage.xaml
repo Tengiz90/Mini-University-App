@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EduVerse.Pages.CoursesOfLecturerPage"
+             Title="Your Courses">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Button Text="Add Course"
+                     Clicked="OnAddCourseClicked"
+                     Padding="10,5" />
+
+            <CollectionView x:Name="lecturerCoursesCollectionView"
+                         ItemsSource="{Binding Courses}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                    ItemSpacing="8" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="Gray"
+                             StrokeShape="RoundRectangle 10"
+                             Padding="10">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding Name}"
+                                    FontSize="18"
+                                    FontAttributes="Bold" />
+
+
+                                <Button Text="See Students Enrolled"
+                                     Clicked="OnSeeStudentsClicked"
+                                     BackgroundColor="#FF9500"
+                                     TextColor="White"
+                                     CornerRadius="10"
+                                     CommandParameter="{Binding .}" />
+                                <Button Text="See Description"
+                                   Clicked="OnSeeDescriptionClicked"
+                                   BackgroundColor="ForestGreen"
+                                   TextColor="White"
+                                   CornerRadius="10"
+                                   CommandParameter="{Binding .}" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

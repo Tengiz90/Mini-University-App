@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EduVerse.Pages.ShowMarksPage"
+             Title="Your Marks">
+
+    <ScrollView>
+        <VerticalStackLayout  Padding="20" Spacing="10" HorizontalOptions="Center">
+
+            <Label x:Name="studentForCourseMarksLabel"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,0" />
+
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 1:" FontAttributes="Bold" />
+                <Label x:Name="homework1Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="homework 2:" FontAttributes="Bold" />
+                <Label x:Name="homework2Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 3:" FontAttributes="Bold" />
+                <Label x:Name="homework3Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 4:" FontAttributes="Bold" />
+                <Label x:Name="homework4Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 5:" FontAttributes="Bold" />
+                <Label x:Name="homework5Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 6:" FontAttributes="Bold" />
+                <Label x:Name="homework6Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 7:" FontAttributes="Bold" />
+                <Label x:Name="homework7Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 8:" FontAttributes="Bold" />
+                <Label x:Name="homework8Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 9:" FontAttributes="Bold" />
+                <Label x:Name="homework9Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Homework 10:" FontAttributes="Bold" />
+                <Label x:Name="homework10Label" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Midterm Exam:" FontAttributes="Bold" />
+                <Label x:Name="midtermExamLabel" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Presentation:" FontAttributes="Bold" />
+                <Label x:Name="presentationLabel" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="Final Exam:" FontAttributes="Bold" />
+                <Label x:Name="finalExamLabel" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

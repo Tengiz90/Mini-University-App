@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EduVerse.Pages.StudentsInCoursePage"
+             Title="Enrolled Students">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label x:Name="courseLabel"
+           FontSize="22"
+           FontAttributes="Bold"
+           HorizontalOptions="Center" />
+
+        <CollectionView x:Name="studentsCollectionView"
+                    ItemsSource="{Binding Students}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                     ItemSpacing="8" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.EmptyView>
+                <Label Text="No students currently enrolled in this course."
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontSize="16"
+           TextColor="Gray"
+           Margin="20" />
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="Gray"
+                        StrokeShape="RoundRectangle 10"
+                        Padding="10"
+                        Margin="0,5">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="{Binding FullName}"
+                               FontSize="18"
+                               FontAttributes="Bold" />
+                            <Button Text="Manage Marks"
+                                Clicked="OnManageMarksClicked"
+                                BackgroundColor="#007AFF"
+                                TextColor="White"
+                                CornerRadius="10"
+                                CommandParameter="{Binding .}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

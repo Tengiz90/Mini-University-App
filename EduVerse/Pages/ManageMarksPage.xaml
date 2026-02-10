@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EduVerse.Pages.ManageMarksPage"
+             Title="Manage Marks">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label x:Name="studentForCourseMarksLabel"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Homework 1" />
+            <Entry x:Name="homework1Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 2" />
+            <Entry x:Name="homework2Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 3" />
+            <Entry x:Name="homework3Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 4" />
+            <Entry x:Name="homework4Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 5" />
+            <Entry x:Name="homework5Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 6" />
+            <Entry x:Name="homework6Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 7" />
+            <Entry x:Name="homework7Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 8" />
+            <Entry x:Name="homework8Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 9" />
+            <Entry x:Name="homework9Entry" Keyboard="Numeric"/>
+
+            <Label Text="Homework 10" />
+            <Entry x:Name="homework10Entry" Keyboard="Numeric"/>
+
+            <Label Text="Midterm Exam" />
+            <Entry x:Name="midtermExamEntry" Keyboard="Numeric"/>
+
+            <Label Text="Presentation" />
+            <Entry x:Name="presentationEntry" Keyboard="Numeric"/>
+
+            <Label Text="Final Exam" />
+            <Entry x:Name="finalExamEntry" Keyboard="Numeric"/>
+
+            <Button Text="Save Marks"
+                    Clicked="OnSaveMarksClicked"
+                    BackgroundColor="#34C759"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Margin="0,15,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
