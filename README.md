@@ -1,3 +1,7 @@
+# About
+This app demonstrates knowledge of C#, Entity Framework Core, and .NET MAUI. It is a basic university/academy course management system that allows teachers to manage their courses and input grades, while enabling students to enroll in courses of their choice and view their marks. Since this was the Stage 1 project of my "Back-End Programming C#, ASP.NET" course at IT Step Academy, and we had not yet covered API creation, the app uses a local in-memory SQLite database instead.
+
+# Screenshots
 ## Main Screen
 | <img src="https://github.com/user-attachments/assets/b7e29144-a524-4cd0-b54e-eeb589682c66" width="700"> |
 | --- |
@@ -15,8 +19,11 @@
 | <img src="https://github.com/user-attachments/assets/6eec9423-e99a-47ed-9c6c-e9d5770e9606" width="650"> | <img src="https://github.com/user-attachments/assets/baa40226-c9e9-41c6-a730-9c3d2ce0f0e0" width="250"> |
 
 ## Teacher Dashboard Screen
-| <img src="https://github.com/user-attachments/assets/7ce9744b-8205-4ba8-8887-9f80559f2b14" width="700"> |
-| --- |
+
+| PC \| Windows | Android |
+|-------------|---------|
+| <img src="https://github.com/user-attachments/assets/7ce9744b-8205-4ba8-8887-9f80559f2b14" width="650"> | <img src="https://github.com/user-attachments/assets/b732b56d-c502-45f1-a744-1e5aeb0a7a30" width="250"> |
+
 
 
 ## Add Course Screen
@@ -32,6 +39,9 @@
 | --- |
 
 ## Student Dashboard Screen
-| <img src="https://github.com/user-attachments/assets/45d73d99-f953-40be-aa1c-e0abe0eac5f7" width="700"> |
-| --- |
+
+| PC \| Windows | Android |
+|-------------|---------|
+| <img src="https://github.com/user-attachments/assets/45d73d99-f953-40be-aa1c-e0abe0eac5f7" width="650"> | <img src="https://github.com/user-attachments/assets/f1992fe0-d6bf-4f26-ae3a-0ead2280c269" width="250"> |
+
 
